@@ -1,0 +1,36 @@
+{
+  "name": "cristian-felipe-portfolio",
+  "private": true,
+  "description": "A portfolio to present my art and job experience",
+  "version": "0.1.0",
+  "author": "Cristian Felipe Calderón Fonseca <cristianpipe0494@gmail.com>",
+  "dependencies": {
+    "gastby": "^1.0.1",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  },
+  "keywords": [
+    "gatsby",
+    "portfolio",
+    "pwa",
+    "airtable"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
