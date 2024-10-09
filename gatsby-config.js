@@ -31,9 +31,9 @@ module.exports = {
         name: `cristian-felipe-portfolio`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#342e3d`,
         display: `minimal-ui`,
-        icon: `src/images/developer-avatar.png`, // This path is relative to the root of the site.
+        icon: `src/images/-art-100.png`, // This path is relative to the root of the site.
       },
     },
   ],
