@@ -9,7 +9,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Cristian Felipe Calderón Fonseca - Portfolio`,
+    title: `Cristian Felipe Calderón Fonseca`,
     description: `A portfolio to present my art and job experience`,
     author: `cristianpipe0494@gmail.com`,
     siteUrl: `https://cristianfelipe94.github.io/Portfolio-Online/`,

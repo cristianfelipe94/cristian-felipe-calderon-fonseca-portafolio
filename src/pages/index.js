@@ -58,15 +58,17 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/developer-avatar.png"
-        loading="eager"
-        width={100}
-        quality={100}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
+      <div>
+        <StaticImage
+          src="../images/avatar-2.png"
+          loading="eager"
+          width={250}
+          quality={100}
+          formats={["auto", "webp", "avif"]}
+          alt=""
+          style={{ marginBottom: `var(--space-3)` }}
+        />
+      </div>
       <h1>
         Hola soy <b>Felipe!</b>
       </h1>
