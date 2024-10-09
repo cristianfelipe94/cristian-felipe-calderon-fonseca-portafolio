@@ -1,0 +1,20 @@
+.headerBar {
+    margin: var(--space-3);
+    padding: var(--space-3) var(--size-gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color-shadows);
+    border-radius: 10px;
+}
+
+.headerLink {
+    font-size: var(--font-sm);
+    text-decoration: none;
+}
+
+.headerIcon {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
