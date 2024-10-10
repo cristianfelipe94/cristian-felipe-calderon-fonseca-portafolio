@@ -1,21 +1,16 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import * as styles from "./header.module.css"
+import { CreativityIconSvg } from "../animationSvg/creativitySvg.tsx"
 
 const Header = ({ siteTitle }) => (
   <header className={styles.headerBar}>
     <Link to="/" className={styles.headerLink}>
       {siteTitle}
     </Link>
-    <StaticImage
-      alt="Cristian Felipe Logo"
-      src="../../images/icon-art-100.png"
-      className={styles.headerIcon}
-      placeholder="blurred"
-      layout="fixed"
-      width={50}
-    />
+    <div className={styles.headerIconContainer}>
+      <CreativityIconSvg className={styles.headerIcon}/>
+    </div>
   </header>
 )
 
