@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Cristian Felipe Calderón Fonseca <cristianpipe0494@gmail.com>",
   "dependencies": {
+    "framer-motion": "^11.11.7",
     "gastby": "^1.0.1",
     "gatsby": "^5.13.7",
     "gatsby-plugin-image": "^3.13.1",
