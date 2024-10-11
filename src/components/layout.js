@@ -29,23 +29,23 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          padding: `0 var(--size-gutter)`,
         }}
       >
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+            margin: `var(--space-4) 0`,
+            fontSize: `var(--font-sm)`
           }}
         >
           © {new Date().getFullYear()} &middot; Construido con
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com" className="footerLinks">GatsbyJS</a>
           {`, `}
-          <a href="https://www.airtable.com">AirTable</a>
+          <a href="https://www.airtable.com" className="footerLinks">AirTable</a>
           {`, `}
-          <a href="https://www.netlify.com">Netlify</a>
+          <a href="https://www.netlify.com" className="footerLinks">Netlify</a>
           {`, `}
           por Cristian Felipe Calderón Fonseca.
         </footer>

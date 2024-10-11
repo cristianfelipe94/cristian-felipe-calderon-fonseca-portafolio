@@ -1,13 +1,17 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import * as styles from "./header.module.css"
 import { CreativityIconSvg } from "../animationSvg/creativitySvg.tsx"
 
 const Header = ({ siteTitle }) => (
   <header className={styles.headerBar}>
-    <Link to="/" className={styles.headerLink}>
-      {siteTitle}
-    </Link>
+    <div>
+      <h1 className={styles.headerTitle}>
+        {siteTitle}
+      </h1>
+      <p className={styles.headerDescription}>
+        Artist, Designer & Web Developer
+      </p>
+    </div>
     <div className={styles.headerIconContainer}>
       <CreativityIconSvg className={styles.headerIcon}/>
     </div>
