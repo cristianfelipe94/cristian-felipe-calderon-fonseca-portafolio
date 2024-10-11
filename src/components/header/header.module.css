@@ -1,16 +1,24 @@
 .headerBar {
-    margin: var(--space-3);
-    padding: var(--space-3) var(--size-gutter);
+    margin: var(--space-4) var(--size-gutter);
+    padding: var(--space-3);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--background-color-shadows);
+    background-color: var(--color-container-header-shadow);
     border-radius: 10px;
 }
 
-.headerLink {
+.headerTitle {
+    font-size: var(--font-md);
+    color: var(--color-text);
+    font-weight: normal;
+    margin: 0;
+}
+
+.headerDescription {
     font-size: var(--font-sm);
-    text-decoration: none;
+    font-weight: normal;
+    margin: 0;
 }
 
 .headerIcon {
