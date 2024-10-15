@@ -6,16 +6,20 @@
 :root {
   --border-radius: 4px;
   --background-color-body: #72fbfb;
-  --background-color-shadows: #ff03fe;
+  --background-color-shadows: #ff00ff;
   --color-text:  #33333;
-  --color-primary: #c6a3ff;
+  --color-primary: #ad85ec;
   --color-primary-shadow: #ffe0f0;
   --color-primary-border:#648f97;
   --color-gradient-light: #0084ff70;
-  --color-container-header-shadow: #00ff7e70;
+  --color-container-header-shadow: #907afb;
+  --color-container-header-light: #10e6f1;
   --color-button-light-shadow: #05ffff;
-  --color-button-light-active-shadow: #00ff11;
+  --color-button-light-active-shadow: #24e5cc;
+  --color-button-light-shadow-second: #0392ff;
+  --color-button-light-active-shadow-second: #85e5ec;
   --color-code-bg: #f9dbff;
+  --deg-shadow-default-rotation: 50deg;
   --font-sans: 'RobotoCustomFont',-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: "RobotoCustomFont" ,SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -44,13 +48,13 @@
 }
 html, body {
   -webkit-text-size-adjust: 100%;
+  background-color: var(--background-color-body);
   height: 100%;
   box-sizing: border-box;
   font: sans-serif;
   font-size: var(--font-md);
   line-height: var(--line-height-normal);
   overflow-y: visible;
-  background: linear-gradient(-40deg, var(--background-color-body), var(--background-color-shadows));
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
@@ -64,7 +68,28 @@ html, body {
 }
 body {
   min-height: 100vh;
+  animation: auraEffectMovement 10s ease infinite;
+  background: linear-gradient(-40deg, var(--background-color-body), var(--background-color-shadows));
+  background-size: 150% 150%;
 }
+@keyframes auraEffectMovement {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 button {
   display: inline-block;
   border: none;
@@ -72,7 +97,7 @@ button {
   margin: 0;
   text-decoration: none;
   font-family: var(--font-sans);
-  font-size: var(--font-md);
+  font-size: var(--font-sm);
   cursor: pointer;
   text-align: center;
   -webkit-appearance: none;
@@ -82,6 +107,7 @@ a {
   background-color: transparent;
   color: var(--color-primary);
   text-decoration: none;
+  font-size: var(--font-sm);
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);

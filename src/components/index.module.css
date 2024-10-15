@@ -54,7 +54,6 @@
 }
 
 .carouselContent {
-  border: 1px solid rgb(192, 255, 219);
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -63,10 +62,10 @@
 
 .menuContainer {
   align-items: center;
-  background-color: var(--color-gradient-light);
-  border-radius: 15px;
+  background: linear-gradient( var(--color-container-header-shadow), var(--color-container-header-light));
+  border-radius: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 10px;
@@ -74,31 +73,93 @@
 }
 
 .buttonMenu {
+  background: linear-gradient(var(--deg-shadow-default-rotation),var(--color-primary), var(--color-primary-shadow));
   font-weight: bold;
   cursor: pointer;
   color: var(--color-text);
   padding: 5px;
   height: fit-content;
   font-weight: normal;
-  border: 2px solid #0587ff;
-  border-radius: 10px;
-  transition: box-shadow 0.5s ease-in-out ;
-  box-shadow: 0px 1px 5px var(--color-button-light-shadow);
-}
-
-.buttonMenu:hover {
-  transition: box-shadow 0.5s ease-in-out ;
-  box-shadow: 0px 1px 10px var(--color-button-light-shadow);
-}
-
-.buttonMenu:active {
-  box-shadow: 0px 1px 5px var(--color-button-light-active-shadow);
+  border: 1px solid #0587ff;
+  border-radius: 5px;
 }
 
 .buttonPages {
-  background: linear-gradient(50deg,var(--color-primary), var(--color-primary-shadow));
+  width: 100%;
+  text-align: center;
+  margin: 0 10px;
+  transition: box-shadow 0.2s ease-in-out ;
+  box-shadow: 0px 1px 5px var(--color-button-light-shadow);
+}
+
+.buttonPages:hover {
+  transition: box-shadow 0.2s ease-in-out ;
+  box-shadow: 0px 1px 10px var(--color-button-light-shadow);
+}
+
+.buttonPages:active {
+  box-shadow: 0px 1px 5px var(--color-button-light-active-shadow);
+}
+
+.buttonPages:first-child {
+  margin: 0 10px 0 0;
+}
+
+.buttonPages:last-child {
+  margin: 0 0 0 10px;
 }
 
 .buttonSocial {
-  background: linear-gradient(50deg,var(--color-primary), var(--color-primary-shadow));
+  width: 100%;
+  text-align: center;
+  transition: box-shadow 0.2s ease-in-out ;
+  box-shadow: 0px 1px 5px var(--color-button-light-shadow-second);
+}
+
+.buttonSocial:hover {
+  transition: box-shadow 0.2s ease-in-out ;
+  box-shadow: 0px 1px 8px var(--color-button-light-shadow-second);
+}
+
+.buttonSocial:active {
+  box-shadow: 0px 1px 5px var(--color-button-light-active-shadow-second);
+}
+
+.buttonSocial {
+  margin: 0 10px;
+}
+
+.buttonSocial:first-child {
+  margin: 0 10px 0 0;
+}
+
+.buttonSocial:last-child {
+  margin: 0 0 0 10px;
+}
+
+.containerInternalLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.containerSocialLinks {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.avatarSVG {
+  min-width: 300px;
+  width: 400px;
+  max-width: 500px;
 }

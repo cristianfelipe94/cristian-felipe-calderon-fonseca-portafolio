@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
 import ArtPage from "./subpages/art-page"
 import CodingPage from "./subpages/coding-page"
@@ -9,7 +9,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
-const moreLinks = [
+const navigationButtons = [
   {
     text: "Home",
     url: "0",
@@ -26,7 +26,8 @@ const moreLinks = [
     text: "Experience",
     url: "3",
   },
-  { text: "Instagram",
+  {
+    text: "Instagram",
     url: "https://www.instagram.com/stoned_christ/"
   },
   {
@@ -40,7 +41,7 @@ const moreLinks = [
 ];
 
 const IndexPage = () => {
-  const pages = [<IntroPage/>,<ArtPage/>,<CodingPage/>,<ExperiencePage/>];
+  const pages = [<IntroPage />, <ArtPage />, <CodingPage />, <ExperiencePage />];
   const [activePage, setActivePage] = useState(0);
   const changePage = (indexPage) => {
     setActivePage(indexPage);
@@ -54,21 +55,29 @@ const IndexPage = () => {
       </div>
 
       <div className={styles.menuContainer}>
-        {moreLinks.map((link, i) => {
-          if (["Home","Art","Coding","Experience"].includes(link.text)) {
-            return (
-              <React.Fragment key={link.text}>
-                <button className={[styles.buttonMenu, styles.buttonPages].join(' ')} onClick={() => changePage(link.url)}>{link.text}</button>
-              </React.Fragment>
-            )
-          } else {
-            return (
-              <React.Fragment key={link.text}>
-                <a className={[styles.buttonMenu, styles.buttonSocial].join(' ')} href={link.url} target="_blank" rel="noreferrer">{link.text}</a>
-              </React.Fragment>
-            )
-          }
-        })}
+        <div className={styles.containerInternalLinks}>
+          {navigationButtons.map((internalLink, i) => {
+            if (["Home", "Art", "Coding", "Experience"].includes(internalLink.text)) {
+              return (
+                <React.Fragment key={internalLink.text}>
+                  <button className={[styles.buttonMenu, styles.buttonPages].join(' ')} onClick={() => changePage(internalLink.url)}>{internalLink.text}</button>
+                </React.Fragment>
+              )
+            }
+          })}
+        </div>
+        <br/>
+        <div className={styles.containerSocialLinks}>
+          {navigationButtons.map((socialLink, i) => {
+            if (["Instagram", "Github", "Portfolio V1"].includes(socialLink.text)) {
+              return (
+                <React.Fragment key={socialLink.text}>
+                  <a className={[styles.buttonMenu, styles.buttonSocial].join(' ')} href={socialLink.url} target="_blank" rel="noreferrer">{socialLink.text}</a>
+                </React.Fragment>
+              )
+            }
+          })}
+        </div>
       </div>
     </Layout>
   );

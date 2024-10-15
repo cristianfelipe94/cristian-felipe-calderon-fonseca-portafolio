@@ -46,8 +46,9 @@ const Layout = ({ children }) => {
           <a href="https://www.airtable.com" className="footerLinks">AirTable</a>
           {`, `}
           <a href="https://www.netlify.com" className="footerLinks">Netlify</a>
-          {`, `}
-          por Cristian Felipe Calderón Fonseca.
+          {`.`}
+          <br/>
+          Cristian Felipe Calderón Fonseca.
         </footer>
       </div>
     </>
