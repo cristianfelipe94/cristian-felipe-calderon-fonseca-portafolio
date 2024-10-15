@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--color-container-header-shadow);
+    background: linear-gradient( var(--color-container-header-shadow), var(--color-container-header-light));
     border-radius: 10px;
 }
 

@@ -2,19 +2,12 @@ import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../../components/seo"
 import * as styles from "../../components/index.module.css"
+import { AvatarSVG } from "../../components/animationSvg/avatarSvg.tsx"
 
 const IntroPage = () => (
     <div>
-        <p>Welcome: Intro Page</p>
-        <div>
-            <StaticImage
-                src="../../images/avatar-2.png"
-                loading="eager"
-                width={250}
-                quality={100}
-                formats={["auto", "webp", "avif"]}
-                alt=""
-            />
+        <div className={styles.avatarContainer}>
+            <AvatarSVG className={styles.avatarSVG}/>
         </div>
     </div>
 )
