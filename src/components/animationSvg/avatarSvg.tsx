@@ -62,12 +62,24 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
             <g id="Mask group">
                 <g id="background-color">
                     <path
-                        id="Ellipse 17"
-                        d="M539.094 80.0724C759.181 146.912 879.288 373.434 807.492 585.956C735.697 798.478 499.134 916.68 279.048 849.84C224.024 833.129 184.349 809.202 156.846 779.492C129.352 749.791 113.919 714.201 107.561 673.984C94.8258 593.431 118.508 494.466 154.587 387.67C190.665 280.873 232.034 187.28 291.76 128.734C321.579 99.5034 355.949 79.0378 396.526 70.0104C437.117 60.98 484.071 63.362 539.094 80.0724Z"
-                        fill="#FF00FF"
-                        stroke="#FF00FF"
+                        fill="url(#a)"
+                        stroke="#F0F"
                         strokeWidth={4}
+                        d="M517.094 80.072c220.087 66.84 340.194 293.362 268.398 505.884S477.134 916.68 257.048 849.84c-55.024-16.711-94.699-40.638-122.202-70.348-27.494-29.701-42.927-65.291-49.285-105.508-12.735-80.553 10.947-179.518 47.026-286.314 36.078-106.797 77.447-200.39 137.173-258.936 29.819-29.23 64.189-49.696 104.766-58.724 40.591-9.03 87.545-6.648 142.568 10.062Z"
                     />
+                    <defs>
+                        <linearGradient
+                            id="a"
+                            x1={276}
+                            x2={591.381}
+                            y1={107.5}
+                            y2={895.239}
+                            gradientUnits="userSpaceOnUse"
+                        >
+                            <stop stopColor="#00ffff" />
+                            <stop offset={1} stopColor="#0776ff" />
+                        </linearGradient>
+                    </defs>
                 </g>
                 <motion.g id="bubbles-inside-mid" {...sharedAnimationBubbles("bubbles-mid")}>
                     <circle
@@ -127,7 +139,7 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
                             className="avatarFrameSize avatarImageFrame"
                             fill="url(#pattern0_882_17)"
                         />
-                        <image x="150" y="125" className="avatarFrameSize avatarImage" href="/avatar-2.png"/>
+                        <image x="150" y="125" className="avatarFrameSize avatarImage" href="/avatar-2.png" />
                     </g>
                 </g>
                 <motion.g id="bubbles-inside-big" {...sharedAnimationBubbles("bubbles-big")}>
@@ -157,7 +169,7 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
             <motion.g id="bubbles-frame-big" {...sharedAnimationBubbles("bubbles-big")}>
                 <path
                     id="Ellipse 19"
-                    d="M853.449 114.017C933.212 138.24 976.063 222.536 949.109 302.324C922.155 382.112 835.623 427.114 755.861 402.89C735.914 396.833 721.672 388.053 711.884 377.149C702.102 366.252 696.661 353.116 694.513 338.16C690.2 308.131 699.178 270.966 712.827 230.565C726.475 190.165 741.942 154.97 763.853 132.906C774.766 121.917 787.244 114.222 801.882 110.742C816.531 107.259 833.502 107.959 853.449 114.017Z"
+                    d="M880.765 243.178C912.081 285.424 902.126 344.253 858.472 374.566C814.818 404.879 754.05 395.159 722.734 352.913C714.901 342.346 711.016 332.59 710.161 323.471C709.307 314.363 711.462 305.731 715.974 297.379C725.055 280.573 743.583 265.077 765.849 249.615C788.116 234.153 809.219 222.131 828.577 219.189C838.196 217.727 847.335 218.518 855.977 222.219C864.628 225.924 872.932 232.611 880.765 243.178Z"
                     fill="#72FBFB"
                     stroke="#FF00FF"
                     strokeWidth={4}
@@ -165,6 +177,13 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
                 <path
                     id="Ellipse 20"
                     d="M980.779 435.263C998.105 480.499 966.234 533.875 908.396 553.999C850.558 574.122 790.104 552.869 772.778 507.632C768.44 496.304 767.941 486.501 770.389 477.848C772.843 469.175 778.31 461.473 786.227 454.465C802.126 440.391 827.544 429.422 856.786 419.248C886.028 409.074 912.883 401.855 934.556 402.857C945.348 403.356 954.736 405.89 962.474 411.016C970.195 416.131 976.441 423.935 980.779 435.263Z"
+                    fill="#72FBFB"
+                    stroke="#FF00FF"
+                    strokeWidth={4}
+                />
+                <path
+                    id="Ellipse 25_2"
+                    d="M777.234 180.382C783.464 186.285 785.817 195.144 784.302 204.926C782.789 214.705 777.415 225.242 768.45 234.136C759.485 243.029 748.742 248.479 738.693 250.17C728.641 251.862 719.452 249.785 713.222 243.882C710.108 240.931 708.599 237.858 708.229 234.676C707.854 231.452 708.626 227.922 710.431 224.061C714.069 216.28 721.644 207.693 730.878 198.534C740.111 189.375 748.792 181.836 756.732 178.131C760.671 176.293 764.294 175.464 767.626 175.753C770.917 176.039 774.12 177.431 777.234 180.382Z"
                     fill="#72FBFB"
                     stroke="#FF00FF"
                     strokeWidth={4}
@@ -291,8 +310,8 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
                 />
                 <ellipse
                     id="Ellipse 48"
-                    cx={928.5}
-                    cy={127}
+                    cx={811.5}
+                    cy={206}
                     rx={11.5}
                     ry={11}
                     fill="#72FBFB"
@@ -350,7 +369,7 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
                     fill="#72FBFB"
                 />
             </motion.g>
-            <motion.g id="bubbles-extra-small" {...sharedAnimationBubbles("bubbles-extra-small")}>
+            <motion.g className="moveSVGLeft" id="bubbles-extra-small" {...sharedAnimationBubbles("bubbles-extra-small")}>
                 <circle id="Ellipse 64" cx={186.5} cy={703.5} r={4.5} fill="#72FBFB" />
                 <circle id="Ellipse 63" cx={186.5} cy={681.5} r={4.5} fill="#72FBFB" />
                 <ellipse
@@ -443,7 +462,7 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
                     ry={5}
                     fill="#72FBFB"
                 />
-                <circle id="Ellipse 147" cx={966.5} cy={257.5} r={4.5} fill="#72FBFB" />
+                <circle id="Ellipse 147" cx={906.5} cy={329.5} r={4.5} fill="#72FBFB" />
                 <ellipse
                     id="Ellipse 164"
                     cx={182.5}
@@ -592,32 +611,32 @@ export const AvatarSVG = (props: SVGProps<SVGSVGElement>) => (
                 />
                 <ellipse
                     id="Ellipse 143"
-                    cx={906}
-                    cy={126.5}
+                    cx={787}
+                    cy={170.5}
                     rx={5}
                     ry={4.5}
                     fill="#72FBFB"
                 />
                 <ellipse
                     id="Ellipse 144"
-                    cx={935.5}
-                    cy={149}
+                    cx={857.5}
+                    cy={204}
                     rx={4.5}
                     ry={5}
                     fill="#72FBFB"
                 />
                 <ellipse
                     id="Ellipse 145"
-                    cx={935.5}
-                    cy={149}
+                    cx={716.5}
+                    cy={162}
                     rx={4.5}
                     ry={5}
                     fill="#72FBFB"
                 />
                 <ellipse
                     id="Ellipse 146"
-                    cx={966.5}
-                    cy={241}
+                    cx={862.5}
+                    cy={386}
                     rx={4.5}
                     ry={4}
                     fill="#72FBFB"

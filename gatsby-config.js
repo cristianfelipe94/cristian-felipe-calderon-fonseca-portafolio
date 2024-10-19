@@ -7,6 +7,8 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+// Initialize dotenv
+require("dotenv").config();
 module.exports = {
   siteMetadata: {
     title: `Cristian Felipe Calderón Fonseca`,
@@ -22,6 +24,18 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.GATSBY_AIRTABLE_API_KEY,
+        tables: [
+          {
+            baseId: process.env.GATSBY_AIRTABLE_BASE,
+            tableName: process.env.GATSBY_AIRTABLE_TABLE_NAME,
+          },
+        ]
       },
     },
     `gatsby-transformer-sharp`,
