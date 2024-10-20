@@ -13,9 +13,9 @@ const ArtPage = () => {
                         description
                         title
                         image {
-                            thumbnails {
-                                full {
-                                    url
+                            localFiles {
+                                childImageSharp {
+                                    gatsbyImageData(layout: CONSTRAINED)
                                 }
                             }
                         }
@@ -32,7 +32,7 @@ const ArtPage = () => {
     const extractData = data.allAirtable.nodes.map((nodeData) => ({
         title: nodeData.data.title,
         description: nodeData.data.description,
-        image: nodeData.data.image[0].thumbnails.full.url,
+        image: nodeData.data.image.localFiles[0],
     }));
 
     return (
