@@ -7,6 +7,7 @@
   --border-radius: 4px;
   --background-color-body: #72fbfb;
   --background-color-shadows: #ff00ff;
+  --cardSize: 300px;
   --color-text:  #33333;
   --color-primary: #ad85ec;
   --color-primary-shadow: #ffe0f0;
@@ -28,6 +29,7 @@
   --font-md: 16px;
   --font-sm: 14px;
   --font-sx: 12px;
+  --galleryTimer: 30s;
   --line-height-loose: 1.75;
   --line-height-normal: 1.5;
   --line-height-dense: 1.1;
@@ -65,6 +67,7 @@ html, body {
   padding: 0;
   word-wrap: break-word;
   overflow-x: hidden;
+  scroll-behavior: none;
 }
 body {
   min-height: 100vh;
