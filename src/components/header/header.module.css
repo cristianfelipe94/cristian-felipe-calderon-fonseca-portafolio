@@ -1,6 +1,6 @@
 .headerBar {
-    margin: var(--space-4) var(--size-gutter);
-    padding: var(--space-3);
+    margin: 5px var(--size-gutter);
+    padding: 5px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;

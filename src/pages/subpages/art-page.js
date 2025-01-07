@@ -35,12 +35,14 @@ const ArtPage = () => {
         image: nodeData.data.image.localFiles[0],
     }));
 
+    const dataLength = data.allAirtable.nodes.length;
+
     return (
-        <div>
+        <div className={styles.galleryMain}>
             <h1>Art</h1>
-            <div className={styles.galleryContainer}>
+            <div className={styles.galleryContainer} style={{"--quantityCards": `${dataLength}`}}>
                 {extractData.map((cardItem, cardIndex) => (
-                    <ArtCard key={cardIndex} itemTitle={cardItem.title} itemDescription={cardItem.description} itemImage={cardItem.image} index={cardIndex}/>
+                    <ArtCard key={cardIndex} itemTitle={cardItem.title} itemDescription={cardItem.description} itemImage={cardItem.image} index={cardIndex} cardLength={dataLength}/>
                 ))}
             </div>
         </div>
